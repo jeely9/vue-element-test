@@ -29,7 +29,7 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   .viewFramework .viewFrame-content {
     display: -ms-flexbox;
     display: flex;
@@ -44,4 +44,10 @@
     flex: 1;
     overflow-y: auto;
   }
+  .viewFramework .viewFrame-content .section-content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
 </style>
