@@ -6,6 +6,7 @@ import Home from '../views/home'
 
 import Basictable from '../views/tables/basic'
 import Fixedheadertable from '../views/tables/fixedheader'
+import BasicNeedForm from '../views/forms/basicNeed'
 Vue.use(Router)
 
 export default new Router({
@@ -45,6 +46,19 @@ export default new Router({
         meta: ['固定标头表格']
       }
     ]
+  },{
+      path: '/forms',
+      name: 'forms',
+      redirect: 'forms/basicneed',
+      component: Index,
+      children: [
+        {
+            path: 'basicneed',
+            name: 'BasicNeed',
+            component: BasicNeedForm,
+            meta: ['基本需求表单']
+        }
+      ]
   }, {
     path: '*',
     redirect: 'home'
